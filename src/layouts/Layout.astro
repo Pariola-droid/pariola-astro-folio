@@ -1,0 +1,76 @@
+---
+import '../styles/index.scss';
+import Navbar from '../components/general/Navbar';
+import Footer from '../components/general/Footer';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="keyword"
+      content="Omopariola Kehinde Philip, pariola.dev, Pariola, Portfolio, Creative Frontend Developer"
+    />
+    <title>
+      {
+        title
+          ? `${title} • Pariola | Creative Frontend Engineer`
+          : 'Pariola | Creative Frontend Engineer'
+      }
+    </title>
+    <meta
+      name="description"
+      content="I enjoy creating frontend solutions with solid foundations, scalability, and excellent user experiences."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:url" content="https://pariola.dev" />
+    <meta property="og:locale" content="en" />
+    <meta
+      property="og:title"
+      content={title
+        ? `${title} • Pariola | Creative Frontend Engineer`
+        : 'Pariola | Creative Frontend Engineer'}
+    />
+    <meta
+      property="og:description"
+      content="I enjoy creating frontend solutions with solid foundations, scalability, and excellent user experiences"
+    />
+    <meta property="og:site_name" content="Pariola" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://ik.imagekit.io/9ghb9cknpe/meta-pariola_R_13RJ9w9.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1664615728373?ik-sdk-version=javascript-1.4.3&updatedAt=1664615728373"
+    />
+    <!-- tw -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="https://twitter.com/ipariola" />
+    <meta
+      name="twitter:title"
+      content={title
+        ? `${title} • Pariola | Creative Frontend Engineer`
+        : 'Pariola | Creative Frontend Engineer'}
+    />
+    <meta
+      name="twitter:description"
+      content="I enjoy creating frontend solutions with solid foundations, scalability, and excellent user experiences"
+    />
+    <meta name="twitter:creator" content="@ipariola" />
+    <meta
+      name="twitter:image"
+      content="https://ik.imagekit.io/9ghb9cknpe/meta-pariola_R_13RJ9w9.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1664615728373"
+    />
+
+    <link rel="canonical" href="https://pariola.dev" />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

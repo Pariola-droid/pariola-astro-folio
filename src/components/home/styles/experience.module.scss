@@ -1,0 +1,72 @@
+// Imports in scss
+@import '../../../styles/core/variables';
+
+.experience {
+  height: fit-content;
+  width: 100%;
+  background-color: $hackBG;
+  display: grid;
+  place-items: center;
+
+  & .expWrapper {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(22, 22, 26);
+    padding: 100px 0 100px;
+
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 50px 0 50px;
+    }
+
+    & .expText {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 800px;
+
+      @media (max-width: $layout-breakpoint-small) {
+        width: 85%;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 3.6em;
+        font-weight: 900;
+        line-height: 1.3;
+        letter-spacing: -0.03em;
+        display: block;
+        margin-bottom: 2rem;
+
+        @media (max-width: $layout-breakpoint-small) {
+          max-width: 100vw;
+          font-size: 2.5rem;
+          margin-bottom: 1.8rem;
+        }
+      }
+
+      p {
+        width: 100%;
+        color: $linearGrey;
+        font-size: 1em;
+        line-height: 2;
+        display: block;
+        margin-top: 0;
+        max-width: 650px;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1em;
+        }
+
+        @media (max-width: $layout-breakpoint-small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

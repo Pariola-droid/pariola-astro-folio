@@ -1,0 +1,46 @@
+#nav {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 3.5rem;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+
+  & .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    height: fit-content;
+
+    @media screen and (max-width: 768px) {
+      max-width: 85%;
+    }
+
+    & h1 {
+      font-family: 'Dosis', sans-serif;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      color: #cbc9e2;
+      z-index: 999999;
+      font-weight: 600;
+    }
+
+    & .uc {
+      display: grid;
+      position: relative;
+      place-items: center;
+      height: 50px;
+      width: 50px;
+      border: 2px solid #cbc9e2;
+      border-radius: 50px;
+      display: none;
+    }
+  }
+}
