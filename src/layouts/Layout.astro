@@ -3,6 +3,10 @@ import '../styles/index.scss';
 import Navbar from '../components/general/Navbar';
 import Footer from '../components/general/Footer';
 
+export interface Props {
+  title?: string;
+}
+
 const { title } = Astro.props;
 ---
 
@@ -13,6 +17,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#000000" />
     <meta
       name="keyword"
       content="Omopariola Kehinde Philip, pariola.dev, Pariola, Portfolio, Creative Frontend Developer"
@@ -29,6 +34,7 @@ const { title } = Astro.props;
       content="I enjoy creating frontend solutions with solid foundations, scalability, and excellent user experiences."
     />
     <meta name="robots" content="index, follow" />
+
     <meta property="og:url" content="https://pariola.dev" />
     <meta property="og:locale" content="en" />
     <meta
@@ -47,7 +53,7 @@ const { title } = Astro.props;
       property="og:image"
       content="https://ik.imagekit.io/9ghb9cknpe/meta-pariola_nX4sCtmT3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676734607287"
     />
-    <!-- tw -->
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="https://twitter.com/ipariola" />
     <meta
